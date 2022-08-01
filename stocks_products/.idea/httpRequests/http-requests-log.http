@@ -1,3 +1,114 @@
+GET http://localhost:8000/api/v1/products/
+Accept: application/json
+
+<> 2022-07-25T202056.200.json
+
+###
+
+GET http://localhost:8000/api/v1/products/
+Accept: application/json
+
+<> 2022-07-25T202028.200.json
+
+###
+
+GET http://localhost:80/api/v1/products/
+Accept: application/json
+
+###
+
+GET http://localhost:80/api/v1/products/
+Accept: application/json
+
+###
+
+GET http://{{baseUrl}}/stocks/?products=2
+Content-Type: application/json
+
+###
+
+PATCH http://{{baseUrl}}/stocks/4/
+Content-Type: application/json
+
+{
+  "positions": [
+    {
+      "product": 2,
+      "quantity": 100,
+      "price": 130.80
+    },
+    {
+      "product": 3,
+      "quantity": 243,
+      "price": 145
+    }
+  ]
+}
+
+###
+
+POST http://{{baseUrl}}/stocks/
+Content-Type: application/json
+
+{
+  "address": "мой адрес не дом и не улица, мой адрес сегодня такой: www.ленинград-спб.ru3",
+  "positions": [
+    {
+      "product": 2,
+      "quantity": 250,
+      "price": 120.50
+    },
+    {
+      "product": 3,
+      "quantity": 100,
+      "price": 180
+    }
+  ]
+}
+
+###
+
+GET http://{{baseUrl}}/products/?search=помидор
+Content-Type: application/json
+
+###
+
+DELETE http://{{baseUrl}}/products/1/
+Content-Type: application/json
+
+###
+
+PATCH http://{{baseUrl}}/products/1/
+Content-Type: application/json
+
+{
+  "description": "Самые сочные и ароматные помидорки"
+}
+
+###
+
+GET http://{{baseUrl}}/products/
+Content-Type: application/json
+
+###
+
+GET http://@baseUrl%20=
+
+POST {{baseUrl}}/products/
+Content-Type: application/json
+
+{
+  "title": "Помидор",
+  "description": "Лучшие помидоры на рынке"
+}
+
+###
+
+GET http://{{baseUrl}}/products/
+Content-Type: application/json
+
+###
+
 GET http://{{baseUrl}}/stocks/?products=2
 Content-Type: application/json
 

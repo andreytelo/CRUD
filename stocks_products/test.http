@@ -1,0 +1,8 @@
+POST http://localhost:8000/adv/
+Content-Type: application/json
+
+{
+  'user' : 'user1'
+}
+
+###
